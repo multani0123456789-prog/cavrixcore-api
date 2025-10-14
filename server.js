@@ -33,3 +33,6 @@ app.get("/test-db", async (req, res) => {
 
 const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+import contactRoutes from "./routes/contactRoutes.js";
+app.use("/api", contactRoutes);
+
