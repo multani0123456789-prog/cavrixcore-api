@@ -1,7 +1,8 @@
 {
   "name": "cavrixcore-api",
   "version": "1.0.0",
-  "description": "CavrixCore backend API",
+  "type": "module",
+"description": "CavrixCore backend API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
