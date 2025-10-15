@@ -35,4 +35,11 @@ const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 import contactRoutes from "./routes/contactRoutes.js";
 app.use("/api", contactRoutes);
-
+// ✅ Healthcheck route (Render + Netlify Test)
+app.get('/api/test', (req, res) => {
+  res.json({
+    success: true,
+    message: '✅ CavrixCore API is Live and Connected to Render',
+    timestamp: new Date().toISOString()
+  });
+});
